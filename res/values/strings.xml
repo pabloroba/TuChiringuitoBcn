@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TuChiringuitoBcn</string>
+    <string name="urlServer">www.tuchiringuitobcn.com/app/</string>
+    <string name="machineServer">http://www.tuchiringuitobcn.com/</string>
+    <string name="map_key">0-ljZDHZZ4T9P_ekNE4Uelb61tP814EpHhicCKA</string>
+
+    <!-- About dialog -->
+    <string name="version_arviewer">1.0beta</string>
+    <string name="revision_arviewer"></string>
+    <string name="about_title">Acerca de</string>
+    <string name="about_web">Visita la web!</string>
+    <string name="about_message">© TuChiringuitoBcn.com \n\n
+                Este software está bajo licencia GPL v3.0!\n\n
+                Autor: P. Ródenas\n
+                prodenas@tuchiringuitobcn.com\n
+                http://www.tuchiringuitobcn.com\n\n
+                
+                Realidad Aumentada: LibreGeoSocial\n
+                (http://www.libregeosocial.org)  
+         </string>
+    <!-- Location preferences -->
+    <string name="pref_location_title">Localización</string>
+    <string name="pref_location_summary">Configurar las preferencias de localización</string>
+    <string name="pref_location_provider_title">Proveedor</string>
+    <string name="pref_location_provider_summary">Escoge un proveedor para tu localización</string>
+    <string name="pref_location_tunits_title">Unidad de tiempo</string>
+    <string name="pref_location_tunits_summary">Escoge la unidad de tiempo</string>
+    <string name="pref_location_period_title">Tiempo de refresco</string>
+    <string name="pref_location_period_summary">Escoge el tiempo de refresco</string>
+    <string name="pref_location_distance_title">Mínima distancia</string>
+    <string name="pref_location_distance_summary">Escoge la mínima distancia para el refresco de la localización</string>
+    <string name="location_provider_title">Problem con el proveedor</string>
+    <string name="location_provider_message">El proveedor de localización que has seleccionado no está activado</string>
+    <string name="location_provider_enable">Activado</string>
+    <string name="location_provider_change">Cambiar</string>
+
+    <!-- AR preferences -->
+    <string name="pref_ar_altitude_title">Propiedades de la altitud</string>
+    <string name="pref_ar_altitude_status_title">Modo de altitud</string>
+    <string name="pref_ar_altitude_status_summary">Selecciona el modo de altitud</string>
+    <string name="pref_ar_altitude_useDistFilter_title">Umbral de altitud</string>
+    <string name="pref_ar_altitude_useDistFilter_summary_on">Objetos lejanos serán mostrados en la línea del horizonte</string>
+    <string name="pref_ar_altitude_useDistFilter_summary_off">Umbral desactivado</string>
+    <string name="pref_ar_altitude_distFilter_title">Umbral</string>
+    <string name="pref_ar_location_title">Propiedades de la localización</string>
+    <string name="pref_ar_tools_title">Herramientas</string>
+    <string name="pref_ar_tools_rotatingCompass_title">Compás de rotación</string>
+    <string name="pref_ar_tools_rotatingCompass_summary_on">Compás de rotación activado</string>
+    <string name="pref_ar_tools_rotatingCompass_summary_off">Compás de rotación desactivado</string>
+    <string name="pref_ar_tools_searchSystem_title">Sistema de búsqueda</string>
+    <string name="pref_ar_tools_searchSystem_summary_on">Sistema de búsqueda del nodo seleccionado activado</string>
+    <string name="pref_ar_tools_searchSystem_summary_off">Sistema de búsqueda del nodo seleccionado desactivado</string>
+    <string name="pref_ar_labels_title">Etiquetas</string>
+    <string name="pref_ar_labels_centerLabels_title">Etiquetas centrales</string>
+    <string name="pref_ar_labels_centerLabels_summary_on">Apertura automática de la info del primer chiringuito activado</string>
+    <string name="pref_ar_labels_centerLabels_summary_off">Apertura automática de la info del primer chiringuito desactivado</string>
+    <string name="pref_ar_labels_imageIcon_title">Icono de la imagen</string>
+    <string name="pref_ar_labels_imageIcon_summary_on">Seleccionar la imagen como icono activado</string>
+    <string name="pref_ar_labels_imageIcon_summary_off">Seleccionar la imagen como icono desactivado</string>
+    <string name="pref_ar_names_title">Nombres de los objetos</string>
+    <string name="pref_ar_names_namesShowing_title">Mostrar</string>
+    <string name="pref_ar_debug_title">Debug</string>
+    <string name="pref_ar_names_namesShowing_summary">Modo enseñar el nombre de los objetos</string>
+    <string name="pref_ar_debug_showMeasures_title">Mostrar los datos de los sensores</string>
+    <string name="pref_ar_debug_showMeasures_summary_on">Medidas de los sensores por pantalla activado</string>
+    <string name="pref_ar_debug_showMeasures_summary_off">Medidas de los sensores por pantalla desactivado</string>
+
+    <!-- User's altitude preferences -->
+    <string name="pref_user_altitude_summary">Configurar las prefencias de altitud del usuario</string>
+    <string name="pref_user_altitude_title">Preferencias de altitud del usuario</string>
+    <string name="pref_useGPS_title">Servicio de localización de altitud</string>
+    <string name="pref_useGPS_summary_on">Servicio de localización de altitud activado</string>
+    <string name="pref_useGPS_summary_off">Servicio de localización de altitud desactivado</string>
+    <string name="pref_userHeight_title">Altura del usuario</string>
+    <string name="pref_useFloor_title">Información de la ubicación del piso</string>
+    <string name="pref_useFloor_summary_on">Información de la ubicación del piso activado</string>
+    <string name="pref_useFloor_summary_off">Información de la ubicación del piso desactivado</string>
+    <string name="pref_floor_title">Número de piso</string>
+
+    <!-- Menu entries -->
+    <string name="menu_distance">Filtro de distancia</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_map">Mapa</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_settings">Preferencias</string>
+
+    <!-- GUI messages -->
+    <string name="ok">OK</string>
+    <string name="done">Hecho</string>
+    <string name="finish">Final</string>
+    <string name="return_">Volver</string>
+    <string name="skip">Pasar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="search">Buscar</string>
+    <string name="no_layer">Mostrando capa por defecto</string>
+    <string name="remove">Borrar</string>
+    <string name="sure">¿Estás seguro?</string>
+    <string name="error">Error</string>
+    <string name="error_too_much_nodes">Demasiados objetos, mostrando los primeros 50</string>
+    <string name="error_environment">Hubo un error cargando los elementos del entorno de Realidad Aumentada</string>
+    <string name="error_no_nodes">No hay nodos a mostrar</string>
+    <string name="loading">Cargando…</string>
+    <string name="distance">Distancia: </string>
+    <string name="no_title">Sin título</string>
+    <string name="no_info">Pronto nueva información de promociones y eventos.</string>
+    <string name="content_1">Foto del Chiringuito</string>
+    <string name="content_2">Link +</string>
+    <string name="content_3">Logo pequeño</string>
+    
+
+</resources>

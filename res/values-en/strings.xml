@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TuChiringuitoBcn</string>
+    <string name="urlServer">www.tuchiringuitobcn.com/app/</string>
+    <string name="machineServer">http://www.tuchiringuitobcn.com/</string>
+    <string name="map_key">0-ljZDHZZ4T9P_ekNE4Uelb61tP814EpHhicCKA</string>
+    
+    <!-- About dialog -->
+    <string name="version_arviewer">1.0beta</string>
+    <string name="revision_arviewer"></string>
+    <string name="about_title">About</string>
+    <string name="about_web">Go to website!</string>
+    <string name="about_message">© TuChiringuitoBcn.com \n\n
+                This software is under GPL v3.0 license!\n\n
+                Author: P. Ródenas\n
+                prodenas@tuchiringuitobcn.com\n
+                http://www.tuchiringuitobcn.com\n\n
+                
+                ARViewer: LibreGeoSocial\n
+                (http://www.libregeosocial.org)  
+    </string>
+    
+    <!-- Location preferences -->
+    <string name="pref_location_title">Location</string>
+    <string name="pref_location_summary">Configure the location preferences</string>
+    <string name="pref_location_provider_title">Provider</string>
+    <string name="pref_location_provider_summary">Choose the provider for your location</string>
+    <string name="pref_location_tunits_title">Time units</string>
+    <string name="pref_location_tunits_summary">Choose the time unit</string>
+    <string name="pref_location_period_title">Time period</string>
+    <string name="pref_location_period_summary">Choose the time period</string>
+    <string name="pref_location_distance_title">Minimum distance</string>
+    <string name="pref_location_distance_summary">Choose the minimum distance for location refreshing</string>
+    <string name="location_provider_title">Provider problem</string>
+    <string name="location_provider_message">The location provider that you have selected is not enabled</string>
+    <string name="location_provider_enable">Enable</string>
+    <string name="location_provider_change">Change</string>
+
+    <!-- AR preferences -->
+    <string name="pref_ar_altitude_title">Altitude properties</string>
+    <string name="pref_ar_altitude_status_title">Altitude mode</string>
+    <string name="pref_ar_altitude_status_summary">Select the altitude system mode</string>
+    <string name="pref_ar_altitude_useDistFilter_title">Altitude threshold</string>
+    <string name="pref_ar_altitude_useDistFilter_summary_on">Far objects will be shown at the horizon line</string>
+    <string name="pref_ar_altitude_useDistFilter_summary_off">Threshold disabled</string>
+    <string name="pref_ar_altitude_distFilter_title">Threshold</string>
+    <string name="pref_ar_location_title">Location properties</string>
+    <string name="pref_ar_tools_title">Tools</string>
+    <string name="pref_ar_tools_rotatingCompass_title">Rotating compass</string>
+    <string name="pref_ar_tools_rotatingCompass_summary_on">Compass rotation enabled</string>
+    <string name="pref_ar_tools_rotatingCompass_summary_off">Compass rotation disabled</string>
+    <string name="pref_ar_tools_searchSystem_title">Search system</string>
+    <string name="pref_ar_tools_searchSystem_summary_on">Clicked node search system enabled</string>
+    <string name="pref_ar_tools_searchSystem_summary_off">Clicked node search system disabled</string>
+    <string name="pref_ar_labels_title">Labels</string>
+    <string name="pref_ar_labels_centerLabels_title">Central labels</string>
+    <string name="pref_ar_labels_centerLabels_summary_on">Automatic opening of the central node summary box enabled</string>
+    <string name="pref_ar_labels_centerLabels_summary_off">Automatic opening of the central node summary box disabled</string>
+    <string name="pref_ar_labels_imageIcon_title">Image icon</string>
+    <string name="pref_ar_labels_imageIcon_summary_on">Set resource image as icon enabled</string>
+    <string name="pref_ar_labels_imageIcon_summary_off">Set resource image as icon disabled</string>
+    <string name="pref_ar_names_title">Object names</string>
+    <string name="pref_ar_names_namesShowing_title">Show</string>
+    <string name="pref_ar_names_namesShowing_summary">Objects name showing mode</string>
+    <string name="pref_ar_debug_title">Debug</string>
+    <string name="pref_ar_debug_showMeasures_title">Show sensors data</string>
+    <string name="pref_ar_debug_showMeasures_summary_on">On-screen sensors measures info enabled</string>
+    <string name="pref_ar_debug_showMeasures_summary_off">On-screen sensors measures info disabled</string>
+
+    <!-- User's altitude preferences -->
+    <string name="pref_user_altitude_summary">Configure the user\'s altitude preferences</string>
+    <string name="pref_user_altitude_title">User\'s altitude preferences</string>
+    <string name="pref_useGPS_title">Location service altitude</string>
+    <string name="pref_useGPS_summary_on">Location service altitude enabled</string>
+    <string name="pref_useGPS_summary_off">Location service altitude disabled</string>
+    <string name="pref_userHeight_title">User\'s tall</string>
+    <string name="pref_useFloor_title">Location floor info</string>
+    <string name="pref_useFloor_summary_on">Location floor info enabled</string>
+    <string name="pref_useFloor_summary_off">Location floor info disabled</string>
+    <string name="pref_floor_title">Floor number</string>
+
+    <!-- Menu entries -->
+    <string name="menu_distance">Distance filter</string>
+    <string name="menu_about">About</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- GUI messages -->
+    <string name="ok">OK</string>
+    <string name="done">Done</string>
+    <string name="finish">Finish</string>
+    <string name="return_">Return</string>
+    <string name="skip">Skip</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="no_layer">Showing default layer</string>
+    <string name="remove">Remove</string>
+    <string name="sure">Are you sure?</string>
+    <string name="error">Error</string>
+    <string name="error_too_much_nodes">Too many objects, showing the first 50 ones</string>
+    <string name="error_environment">There was an error loading the AR environment elements</string>
+    <string name="error_no_nodes">There aren\'t nodes to show</string>
+    <string name="loading">Loading…</string>
+    <string name="distance">Distance: </string>
+    <string name="no_title">No title</string>
+    <string name="no_info">Coming new info about events and promotions.</string>
+    <string name="content_1">Photo of the Chiringuito</string>
+    <string name="content_2">Link +</string>
+    <string name="content_3">Logo small</string>
+    
+
+</resources>

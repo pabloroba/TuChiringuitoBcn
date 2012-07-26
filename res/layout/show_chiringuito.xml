@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:padding="3dip"
+    android:scrollbarStyle="insideOverlay" >
+
+    <TextView
+        android:id="@+id/chiringuitoName"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/logo"
+        android:padding="3dip"
+        android:text="@string/no_title"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:contentDescription="@string/content_3"
+        android:src="@drawable/indicator" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/chiringuitoName" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+                <ImageView
+                    android:id="@+id/chiringuitoPhoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/content_1"
+                    android:padding="3dip"
+                    android:src="@drawable/indicator" />
+
+                <TextView
+                    android:id="@+id/chiringuitoInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/chiringuitoPhoto"
+                    android:background="@android:color/background_dark"
+                    android:clickable="false"
+                    android:padding="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="5dip"
+                    android:text="@string/no_info"
+                    style="@android:style/TextAppearance.Small"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/buttonLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/chiringuitoInfo"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/about_web"
+                    style="@android:style/TextAppearance.Small"
+                  
+                    android:textColor="@android:color/black"
+                     />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

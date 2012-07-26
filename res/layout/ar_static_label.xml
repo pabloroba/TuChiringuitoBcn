@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/ar_static_left_cont"
+        android:layout_width="150dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="2dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ar_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_1" >
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/ar_media_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ar_button_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dip"
+                android:background="@drawable/bplay" >
+            </Button>
+
+            <Button
+                android:id="@+id/ar_button_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dip"
+                android:background="@drawable/bstop" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ar_static_right_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_margin="2dip"
+        android:layout_toRightOf="@+id/ar_static_left_cont"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ar_static_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="15dip"
+            android:textStyle="bold" >
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/ar_static_distance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:maxLines="1"
+                android:text="@string/distance"
+                android:textColor="#000000"
+                android:textSize="10dip"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/ar_static_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ar_static_distance_label"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="10dip"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ar_static_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:maxLines="5"
+            android:textColor="#000000"
+            android:textSize="13dip" >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ar_static_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#dfff"
+        android:maxLines="1"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:textColor="#000000"
+        android:textSize="10dip" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ar_button_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/content_2"
+        android:src="@drawable/ic_staticbox_plus" />
+
+</RelativeLayout>
