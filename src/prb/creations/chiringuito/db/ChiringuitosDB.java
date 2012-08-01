@@ -76,5 +76,6 @@ public class ChiringuitosDB {
 		public static final String LATITUDE = "latitude";
 		public static final String LONGITUDE = "longitude";
 		public static final String PHOTO = "picture";
+		public static final String SOURCE = "source";
 	}
 }
