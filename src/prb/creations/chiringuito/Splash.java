@@ -44,10 +44,9 @@ package prb.creations.chiringuito;
 
 import prb.creations.chiringuito.ARviewer.ARviewer;
 import prb.creations.chiringuito.db.ChiringuitoProvider;
-import prb.creations.chiringuito.db.ChiringuitosDB.Chiringuitos;
+import prb.creations.chiringuito.rss.RssDownloadHelper;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -58,8 +57,6 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
-import java.net.URL;
 
 public class Splash extends Activity {
     private static final int ACTIVITY_RESULT = 1;
@@ -150,24 +147,8 @@ public class Splash extends Activity {
     }
 
     private void generateChiringuitosDB() {
-        resetContentResolver();
-        String names[] = new String[] {}, locations[] = new String[] {};
-        int n = (int) (names.length / 3);
-        for (int i = 0; i < n; i++) {
-            ContentValues values = new ContentValues();
-            values.put(Chiringuitos.NAME, names[3 * i]);
-            values.put(Chiringuitos.WEB_LINK, names[3 * i + 1]);
-            values.put(Chiringuitos.INFO, names[3 * i + 2]);
-            values.put(Chiringuitos.LATITUDE, locations[2 * i]);
-            values.put(Chiringuitos.LONGITUDE, locations[2 * i + 1]);
-            URL url = getClassLoader().getResource(
-                    "res/drawable/chir" + i + ".png");
-            if (url != null)
-                values.put(Chiringuitos.PHOTO, url.toString());
-
-            getContentResolver()
-                    .insert(ChiringuitoProvider.CONTENT_URI, values);
-        }
+        ChiringuitoApp app = (ChiringuitoApp) getApplication();
+        RssDownloadHelper.updateRssData(app.getRssUrl(), getContentResolver());
     }
 
     private void resetContentResolver() {
