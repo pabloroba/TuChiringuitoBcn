@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -157,7 +157,6 @@ public class MapChiringuitoActivity extends MapActivity {
         mController.setZoom(14);
         mController.setCenter(new GeoPoint((int) (41.394196 * 1E6),
                 (int) (2.211299 * 1E6)));
-        // a–adimos los Overlays al mapa
         initializeOverlays();
         // LOCATION
         mLocation = new MyLocationOverlay(mContext, mMap);
@@ -275,12 +274,12 @@ public class MapChiringuitoActivity extends MapActivity {
                 View textEntryView2 = factory2.inflate(R.layout.custom_dialog,
                         null);
 
-                TextView text2 = (TextView) textEntryView2
-                        .findViewById(R.id.dialog_text);
-                text2.setText(getString(R.string.app_name) + " "
-                        + getString(R.string.version_arviewer) +
-                        getString(R.string.revision_arviewer) + "\n"
-                        + getString(R.string.about_message));
+                TextView textChir = (TextView) textEntryView2
+                        .findViewById(R.id.dialog_text_chiringuito);
+                CharSequence str = textChir.getText();
+                textChir.setText(getString(R.string.app_name) + " "
+                        + getString(R.string.version_arviewer) + "\n"
+                        + str.toString());
                 return new AlertDialog.Builder(this)
                         .setIcon(R.drawable.ic_menu_about)
                         .setTitle(R.string.about_title)
@@ -326,20 +325,15 @@ public class MapChiringuitoActivity extends MapActivity {
         }
     }
 
-    /*
-     * MŽtodo para buscar la direcci—n introducida por el usuario, y en caso de
-     * encontrarla, desplazar el mapa hasta dicho punto.
-     */
+
     protected void searchAddress() {
         final String address = actvAddress.getText().toString();
-        // evitamos que se busque "Direcci—n a buscar"
         if (address.length() == 0) {
             return;
         }
         GeoPoint p = null;
 
         try {
-            // miramos si es un lugar conocido
             final String[] columnas = new String[] {
                     Chiringuitos._ID,
                     Chiringuitos.NAME,

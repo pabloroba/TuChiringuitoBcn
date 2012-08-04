@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -148,12 +148,9 @@ public class Splash extends Activity {
 
     private void generateChiringuitosDB() {
         ChiringuitoApp app = (ChiringuitoApp) getApplication();
-        RssDownloadHelper.updateRssData(app.getRssUrl(), getContentResolver());
-    }
-
-    private void resetContentResolver() {
         getContentResolver()
                 .delete(ChiringuitoProvider.CONTENT_URI, null, null);
+        RssDownloadHelper.updateRssData(app.getRssUrl(), getContentResolver());
     }
 
 }

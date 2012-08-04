@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARViewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *

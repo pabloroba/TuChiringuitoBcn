@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">TuChiringuitoBcn</string>
     <string name="urlServer">www.tuchiringuitobcn.com/app/</string>
     <string name="machineServer">http://www.tuchiringuitobcn.com/</string>
     <string name="map_key">0-ljZDHZZ4T9P_ekNE4Uelb61tP814EpHhicCKA</string>
-    
+
     <!-- About dialog -->
-    <string name="version_arviewer">1.0beta</string>
-    <string name="revision_arviewer"></string>
+    <string name="version_chiringuito">1.1beta</string>
     <string name="about_title">About</string>
     <string name="about_web">Go to website!</string>
-    <string name="about_message">© TuChiringuitoBcn.com \n\n
+    <string name="about_message_chiringuito">© TuChiringuitoBcn.com \n\n
                 This software is under GPL v3.0 license!\n\n
                 Author: P. Ródenas\n
                 prodenas@tuchiringuitobcn.com\n
-                http://www.tuchiringuitobcn.com\n\n
+                http://www.tuchiringuitobcn.com\n\n\n
                 
-                ARViewer: LibreGeoSocial\n
-                (http://www.libregeosocial.org)  
-    </string>
-    
+                Powered by ARviewer:\n  </string>
+    <string name="about_message_arviewer">http://www.libregeosocial.org/node/24\n\n
+				All development has been made by the investigation group of open
+				source Libresoft from the Universidad Rey Juan Carlos:\n\n
+				
+				Web sites: \n
+				http://libresoft.es/\n
+				http://www.urjc.es/\n</string>
+
     <!-- Location preferences -->
     <string name="pref_location_title">Location</string>
     <string name="pref_location_summary">Configure the location preferences</string>
@@ -108,6 +113,7 @@
     <string name="content_1">Photo of the Chiringuito</string>
     <string name="content_2">Link +</string>
     <string name="content_3">Logo small</string>
-    
+    <string name="content_4">Logo splash</string>
+    <string name="content_5">Logo ARviewer</string>
 
 </resources>

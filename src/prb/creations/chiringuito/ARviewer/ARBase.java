@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -422,12 +422,12 @@ public class ARBase extends ARActivity {
                 View textEntryView2 = factory2.inflate(R.layout.custom_dialog,
                         null);
 
-                TextView text2 = (TextView) textEntryView2
-                        .findViewById(R.id.dialog_text);
-                text2.setText(getString(R.string.app_name) + " "
-                        + getString(R.string.version_arviewer) +
-                        getString(R.string.revision_arviewer) + "\n"
-                        + getString(R.string.about_message));
+                TextView textChir = (TextView) textEntryView2
+                        .findViewById(R.id.dialog_text_chiringuito);
+                CharSequence str = textChir.getText();
+                textChir.setText(getString(R.string.app_name) + " "
+                        + getString(R.string.version_arviewer) + "\n"
+                        + str.toString());
                 return new AlertDialog.Builder(this)
                         .setIcon(R.drawable.ic_menu_about)
                         .setTitle(R.string.about_title)

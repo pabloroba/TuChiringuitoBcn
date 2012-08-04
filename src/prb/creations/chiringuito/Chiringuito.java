@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -45,13 +45,17 @@ package prb.creations.chiringuito;
 import com.libresoft.sdk.ARviewer.Types.GeoNode;
 import com.libresoft.sdk.ARviewer.Utils.BitmapUtils;
 
+import prb.creations.chiringuito.ARviewer.Utils.IOUtils;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.util.Log;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Serializable;
+import java.net.URL;
 
 public class Chiringuito extends GeoNode implements Serializable {
     // Serializable UID
@@ -62,8 +66,8 @@ public class Chiringuito extends GeoNode implements Serializable {
     private String mInfo = null;
     private String mPhotoUrl = null;
     private String mLink = null;
-
-    byte[] mByteBitMapImageThumb, mByteBitMapImage;
+    private Bitmap bmImageThumb, bmImage;
+//    byte[] mByteBitMapImageThumb, mByteBitMapImage;
 
     public Chiringuito(Integer id, Double latitude, Double longitude,
             Double altitude, Double radius,
@@ -79,8 +83,10 @@ public class Chiringuito extends GeoNode implements Serializable {
         mLink = web_link;
         setRowId(row_id);
 
-        mByteBitMapImageThumb = null;
-        mByteBitMapImage = null;
+        bmImageThumb = null;
+        bmImage = null;
+//        mByteBitMapImageThumb = null;
+//        mByteBitMapImage = null;
     }
 
     public String getName() {
@@ -117,23 +123,30 @@ public class Chiringuito extends GeoNode implements Serializable {
 
     public boolean isBitmapPhotoThumb()
     {
-        return mByteBitMapImageThumb != null;
+        return bmImageThumb != null;
+//        return mByteBitMapImageThumb != null;
     }
 
     public Bitmap getBitmapPhotoThumb()
     {
-        if (mByteBitMapImageThumb == null)
+//        if (mByteBitMapImageThumb == null)
+        if (bmImageThumb == null)
         {
             try {
                 Bitmap bitmapImage = null;
 
-                if (mByteBitMapImage != null)
-                    bitmapImage = BitmapFactory
-                            .decodeStream(new ByteArrayInputStream(
-                                    mByteBitMapImage));
+//                if (mByteBitMapImage != null)
+                if (bmImage != null)
+                    bitmapImage = bmImage;
+//                    bitmapImage = BitmapFactory
+//                            .decodeStream(new ByteArrayInputStream(
+//                                    mByteBitMapImage));
                 else if (mPhotoUrl != null)
-                    bitmapImage = BitmapUtils.loadBitmap(mPhotoUrl);
+                    bitmapImage = IOUtils.getBitmapFromURL(mPhotoUrl);
+//                    bitmapImage = BitmapUtils.loadBitmap(mPhotoUrl);
 
+                if (bitmapImage == null)
+                    return null;
                 if ((bitmapImage.getHeight() * bitmapImage.getWidth()) > 57600) { // 240x240
                     if (bitmapImage.getWidth() > bitmapImage.getHeight())
                         bitmapImage = Bitmap
@@ -151,78 +164,90 @@ public class Chiringuito extends GeoNode implements Serializable {
                                                 .getHeight()) * 240), 240, true);
                 }
 
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                if (!bitmapImage
-                        .compress(Bitmap.CompressFormat.JPEG, 100, baos))
-                {
-                    Log.e("getBitmapImageThumb",
-                            "Error: Don't compress de image");
-                    return null;
-                }
-
-                mByteBitMapImageThumb = baos.toByteArray();
+//                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                if (!bitmapImage
+//                        .compress(Bitmap.CompressFormat.JPEG, 100, baos))
+//                {
+//                    Log.e("getBitmapImageThumb",
+//                            "Error: Don't compress de image");
+//                    return null;
+//                }
+                  bmImageThumb = bitmapImage;
+//                mByteBitMapImageThumb = baos.toByteArray();
 
             } catch (Exception e) {
                 Log.e("Photo", "", e);
-                mByteBitMapImageThumb = null;
+                bmImageThumb = null;
+//                mByteBitMapImageThumb = null;
                 return null;
             }
 
         }
 
-        if (mByteBitMapImageThumb == null)
+//        if (mByteBitMapImageThumb == null)
+        if (bmImageThumb == null)
             return null;
 
-        return BitmapFactory.decodeStream(new ByteArrayInputStream(
-                mByteBitMapImageThumb));
+        return bmImageThumb;
+//        return BitmapFactory.decodeStream(new ByteArrayInputStream(
+//                mByteBitMapImageThumb));
     }
 
     public void clearBitmapPhotoThumb() {
-        mByteBitMapImageThumb = null;
+        bmImageThumb.recycle();
+        bmImageThumb = null;
+//        mByteBitMapImageThumb = null;
     }
 
     public void clearBitmapPhoto() {
-        mByteBitMapImage = null;
+        bmImage.recycle();
+        bmImage = null;
+//        mByteBitMapImage = null;
     }
 
     public boolean isBitmapPhoto()
     {
-        return mByteBitMapImage != null;
+        return bmImage != null;
+//        return mByteBitMapImage != null;
     }
 
     public Bitmap getBitmapPhoto()
     {
-        if (mByteBitMapImage == null)
+//        if (mByteBitMapImage == null)
+        if (bmImage == null)
         {
             try {
                 Bitmap bitmapImage = null;
 
                 if (mPhotoUrl != null)
-                    bitmapImage = BitmapUtils.loadBitmap(mPhotoUrl);
+                    bitmapImage = IOUtils.getBitmapFromURL(mPhotoUrl);
+//                    bitmapImage = BitmapUtils.loadBitmap(mPhotoUrl);
 
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                if (!bitmapImage
-                        .compress(Bitmap.CompressFormat.JPEG, 100, baos))
-                {
-                    Log.e("getBitmapImage", "Error: Don't compress de image");
-                    return null;
-                }
-
-                mByteBitMapImage = baos.toByteArray();
-
+//                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                if (!bitmapImage
+//                        .compress(Bitmap.CompressFormat.JPEG, 100, baos))
+//                {
+//                    Log.e("getBitmapImage", "Error: Don't compress de image");
+//                    return null;
+//                }
+//
+//                mByteBitMapImage = baos.toByteArray();
+                bmImage = bitmapImage;
             } catch (Exception e) {
                 Log.e("Photo", "", e);
-                mByteBitMapImage = null;
+//                mByteBitMapImage = null;
                 return null;
             }
 
         }
 
-        if (mByteBitMapImage == null)
+//        if (mByteBitMapImage == null)
+        if (bmImage == null)
             return null;
 
-        return BitmapFactory.decodeStream(new ByteArrayInputStream(
-                mByteBitMapImage));
+        return bmImage;
+//        return BitmapFactory.decodeStream(new ByteArrayInputStream(
+//                mByteBitMapImage));
     }
 
     public int describeContents() {

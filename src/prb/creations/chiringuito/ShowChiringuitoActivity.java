@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -46,6 +46,7 @@ import com.libresoft.sdk.ARviewer.Utils.BitmapUtils;
 
 import prb.creations.chiringuito.ARviewer.ARviewer;
 import prb.creations.chiringuito.ARviewer.Location.ARLocationManager;
+import prb.creations.chiringuito.ARviewer.Utils.IOUtils;
 import prb.creations.chiringuito.db.ChiringuitoProvider;
 import prb.creations.chiringuito.db.ChiringuitosDB.Chiringuitos;
 
@@ -60,6 +61,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -118,7 +120,7 @@ public class ShowChiringuitoActivity extends Activity {
             } else {
                 return;
             }
-                
+
             cursor.setNotificationUri(getContentResolver(), uri);
             startManagingCursor(cursor);
 
@@ -127,13 +129,15 @@ public class ShowChiringuitoActivity extends Activity {
                 String sInfo = cursor.getString(2);
                 String sPhoto = cursor.getString(3);
                 final String sLink = cursor.getString(4);
-
+                
+                Log.e("SHOWCHIRINGO: ", sName + "\n" + sInfo + "\n" + sPhoto + "\n" + sLink);
+                
                 tvName.setText(sName);
                 if (sInfo != null && sInfo.length() > 0)
                     tvInfo.setText(sInfo);
                 if (sPhoto != null && sPhoto.length() > 0) {
                     try {
-                        bmPhoto = BitmapUtils.loadBitmap(sPhoto);
+                        bmPhoto = IOUtils.getBitmapFromURL(sPhoto);
                         ivPhoto.setImageBitmap(bmPhoto);
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -161,7 +165,7 @@ public class ShowChiringuitoActivity extends Activity {
                         }
                     });
                 }
-            } 
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -180,13 +184,12 @@ public class ShowChiringuitoActivity extends Activity {
                 LayoutInflater factory2 = LayoutInflater.from(this);
                 View textEntryView2 = factory2.inflate(R.layout.custom_dialog,
                         null);
-
-                TextView text2 = (TextView) textEntryView2
-                        .findViewById(R.id.dialog_text);
-                text2.setText(getString(R.string.app_name) + " "
-                        + getString(R.string.version_arviewer) +
-                        getString(R.string.revision_arviewer) + "\n"
-                        + getString(R.string.about_message));
+                TextView textChir = (TextView) textEntryView2
+                        .findViewById(R.id.dialog_text_chiringuito);
+                CharSequence str = textChir.getText();
+                textChir.setText(getString(R.string.app_name) + " "
+                        + getString(R.string.version_arviewer) + "\n"
+                        + str.toString());
                 return new AlertDialog.Builder(this)
                         .setIcon(R.drawable.ic_menu_about)
                         .setTitle(R.string.about_title)
