@@ -42,24 +42,16 @@
 
 package prb.creations.chiringuito.ARviewer.Multimedia;
 
-import java.io.BufferedOutputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.media.MediaPlayer;
-import android.media.MediaRecorder;
 import android.media.MediaPlayer.OnCompletionListener;
+import android.media.MediaRecorder;
 import android.util.Log;
 
 public class AudioManager extends ContextWrapper {
 
-    private String mFileName = "tmpaudio.3gpp";
+//    private String mFileName = "tmpaudio.3gpp";
 
     private MediaRecorder mRecorder;
 
@@ -78,10 +70,10 @@ public class AudioManager extends ContextWrapper {
 
     }
 
-    public void setName(String name)
-    {
-        mFileName = name + ".3gpp";
-    }
+//    public void setName(String name)
+//    {
+//        mFileName = name + ".3gpp";
+//    }
 
     // public String getPath ()
     // {

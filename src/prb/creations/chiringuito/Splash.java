@@ -57,7 +57,6 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 public class Splash extends Activity {
     private static final int ACTIVITY_RESULT = 1;
@@ -160,8 +159,6 @@ public class Splash extends Activity {
 
         @Override
         protected void onPostExecute(String result) {
-            Toast.makeText(getApplicationContext(), "Chiringuitos updated!",
-                    Toast.LENGTH_SHORT).show();
         }
     }
 

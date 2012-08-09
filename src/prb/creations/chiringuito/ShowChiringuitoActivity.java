@@ -42,8 +42,6 @@
 
 package prb.creations.chiringuito;
 
-import com.libresoft.sdk.ARviewer.Utils.BitmapUtils;
-
 import prb.creations.chiringuito.ARviewer.ARviewer;
 import prb.creations.chiringuito.ARviewer.Location.ARLocationManager;
 import prb.creations.chiringuito.ARviewer.Utils.IOUtils;

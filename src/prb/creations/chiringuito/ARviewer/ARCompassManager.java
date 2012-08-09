@@ -140,9 +140,6 @@ public class ARCompassManager implements SensorEventListener {
 
         SensorManager.getRotationMatrix(inr, i, values_acc, values_mag);
 
-        if (inr == null)
-            return;
-
         SensorManager.remapCoordinateSystem(inr, SensorManager.AXIS_X,
                 SensorManager.AXIS_Z, outr);
 

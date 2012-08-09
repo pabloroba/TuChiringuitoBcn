@@ -53,7 +53,6 @@ import prb.creations.chiringuito.db.ChiringuitosDB.Chiringuitos;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.net.Uri;
-import android.util.Log;
 
 public class RssHandler extends DefaultHandler implements LexicalHandler {
     protected final String RSS = "rss";
@@ -96,11 +95,9 @@ public class RssHandler extends DefaultHandler implements LexicalHandler {
         if (in_item) {
             if (in_title) {
                 rssItem.put(Chiringuitos.NAME, new String(ch, start, length));
-                Log.e("Chars: ","put NAME: " + new String(ch, start, length));
             } else if (in_link) {
                 rssItem.put(Chiringuitos.WEB_LINK,
                         new String(ch, start, length));
-                Log.e("Chars: ","put LINK: " + new String(ch, start, length));
             } else if (in_comments) {
                 String strCoords = new String(ch, start, length);
                 String[] coords = strCoords.split(",");
@@ -108,19 +105,15 @@ public class RssHandler extends DefaultHandler implements LexicalHandler {
                 double lon = Double.parseDouble(coords[1]);
                 rssItem.put(Chiringuitos.LATITUDE, lat);
                 rssItem.put(Chiringuitos.LONGITUDE, lon);
-                Log.e("Chars: ","put LAT/LON: " + lat + ", " + lon);
             } else if (in_description) {
                 rssItem.put(Chiringuitos.INFO, new String(ch, start, length));
-                Log.e("Chars: ","put INFO: " + new String(ch, start, length));
             } else if (in_enclosure) {
-                    rssItem.put(Chiringuitos.PHOTO, new String(ch, start,
-                            length));
-                    Log.e("Chars: ","put PHOTO: " + new String(ch, start, length));
+                rssItem.put(Chiringuitos.PHOTO, new String(ch, start,
+                        length));
             } else if (in_source) {
-                    rssItem.put(Chiringuitos.SOURCE, new String(ch, start,
-                            length));
-                    Log.e("Chars: ","put SOURCE: " + new String(ch, start, length));
-            } 
+                rssItem.put(Chiringuitos.SOURCE, new String(ch, start,
+                        length));
+            }
         }
     }
 
@@ -129,7 +122,6 @@ public class RssHandler extends DefaultHandler implements LexicalHandler {
             throws SAXException {
         if (localName.equalsIgnoreCase(ITEM)) {
             contentProv.insert(uri, rssItem);
-            Log.e("EndElement: ","INSERT!!!!");
             rssItem = new ContentValues();
             in_item = false;
         } else if (localName.equalsIgnoreCase(ITEM_TITLE)) {

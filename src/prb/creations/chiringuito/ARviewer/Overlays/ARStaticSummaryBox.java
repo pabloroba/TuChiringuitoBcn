@@ -44,28 +44,24 @@ package prb.creations.chiringuito.ARviewer.Overlays;
 
 import prb.creations.chiringuito.R;
 import prb.creations.chiringuito.ShowChiringuitoActivity;
-import prb.creations.chiringuito.db.ChiringuitosDB.Chiringuitos;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemSelectedListener;
 
 public class ARStaticSummaryBox extends ARSummaryBox {
-    private long chiringuitoID = -1;
     private Gallery gallery;
     private Activity mActivity;
 

@@ -43,20 +43,18 @@
 package prb.creations.chiringuito.ARviewer.Overlays;
 
 import prb.creations.chiringuito.ARviewer.ARUtils;
-import prb.creations.chiringuito.R;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Paint.Align;
 import android.graphics.Path;
 import android.graphics.RectF;
-import android.graphics.Typeface;
-import android.graphics.Paint.Align;
 import android.graphics.Shader.TileMode;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;

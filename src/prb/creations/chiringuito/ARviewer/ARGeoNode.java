@@ -42,8 +42,12 @@
 
 package prb.creations.chiringuito.ARviewer;
 
-import java.util.ArrayList;
-import java.util.concurrent.Semaphore;
+import com.libresoft.sdk.ARviewer.Types.Audio;
+import com.libresoft.sdk.ARviewer.Types.GeoNode;
+import com.libresoft.sdk.ARviewer.Types.Note;
+import com.libresoft.sdk.ARviewer.Types.Photo;
+import com.libresoft.sdk.ARviewer.Types.User;
+import com.libresoft.sdk.ARviewer.Types.Video;
 
 import prb.creations.chiringuito.Chiringuito;
 import prb.creations.chiringuito.R;
@@ -52,16 +56,10 @@ import prb.creations.chiringuito.ARviewer.Overlays.ARStaticSummaryBox;
 import prb.creations.chiringuito.ARviewer.Overlays.ARSummaryBox;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawRadar;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawResource;
-import prb.creations.chiringuito.ARviewer.Overlays.DrawResourceSearcher;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawResource.OnCenterListener;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawResource.OnGetIconListener;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawResource.OnShowIconListener;
-import com.libresoft.sdk.ARviewer.Types.Audio;
-import com.libresoft.sdk.ARviewer.Types.GeoNode;
-import com.libresoft.sdk.ARviewer.Types.Note;
-import com.libresoft.sdk.ARviewer.Types.Photo;
-import com.libresoft.sdk.ARviewer.Types.User;
-import com.libresoft.sdk.ARviewer.Types.Video;
+import prb.creations.chiringuito.ARviewer.Overlays.DrawResourceSearcher;
 
 import android.app.Activity;
 import android.content.Context;
@@ -71,10 +69,12 @@ import android.graphics.Point;
 import android.location.Location;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
+
+import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
 
 public class ARGeoNode implements ARNodeDrawingIF {
 

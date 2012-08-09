@@ -43,19 +43,13 @@
 package prb.creations.chiringuito;
 
 import com.libresoft.sdk.ARviewer.Types.GeoNode;
-import com.libresoft.sdk.ARviewer.Utils.BitmapUtils;
 
 import prb.creations.chiringuito.ARviewer.Utils.IOUtils;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.util.Log;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.Serializable;
-import java.net.URL;
 
 public class Chiringuito extends GeoNode implements Serializable {
     // Serializable UID
