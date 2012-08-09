@@ -336,6 +336,7 @@ public class ARBase extends ARActivity {
         loc.setLongitude(getLocation()[1]);
         loc.setAltitude(cam_altitude);
         ARLocationManager.getInstance(this).setLocation(loc);
+        this.mWakeLock.release();
 
     }
 
@@ -351,6 +352,7 @@ public class ARBase extends ARActivity {
 
         if (!(idGPS < 0))
             ARLocationManager.getInstance(this).startUpdates(this);
+        this.mWakeLock.acquire();
 
     }
 
@@ -358,7 +360,6 @@ public class ARBase extends ARActivity {
         ARGeoNode.clearBox();
         ARLocationManager.getInstance(this).stopUpdates();
         ARLocationManager.getInstance(this).resetLocation();
-        this.mWakeLock.release();
         super.onDestroy();
     }
 

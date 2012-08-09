@@ -71,6 +71,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -98,10 +100,15 @@ public class MapChiringuitoActivity extends MapActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Hide the window title and notifications bar.
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        
         setContentView(R.layout.map);
         mContext = this.getApplicationContext();
-        uri = Uri.parse("content://" + ChiringuitoProvider.PROVIDER_NAME
-                + "/chiringuitos");
+        uri = ChiringuitoProvider.CONTENT_URI;
 
         actvAddress = (AutoCompleteTextView) findViewById(R.id.searchView);
         actvAddress.setOnClickListener(new View.OnClickListener() {
@@ -241,8 +248,8 @@ public class MapChiringuitoActivity extends MapActivity {
                 getResources().getDrawable(R.drawable.indicator));
         while (cursor.moveToNext()) {
             itemizedOverlay.addLocalization(cursor.getLong(0),
-                    cursor.getFloat(1),
-                    cursor.getFloat(2),
+                    cursor.getDouble(1),
+                    cursor.getDouble(2),
                     cursor.getString(3));
         }
         if (cursor.getCount() > 0)

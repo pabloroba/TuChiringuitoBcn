@@ -43,11 +43,11 @@
 package prb.creations.chiringuito;
 
 import prb.creations.chiringuito.ARviewer.ARviewer;
-import prb.creations.chiringuito.db.ChiringuitoProvider;
 import prb.creations.chiringuito.rss.RssDownloadHelper;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -57,6 +57,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class Splash extends Activity {
     private static final int ACTIVITY_RESULT = 1;
@@ -125,7 +126,9 @@ public class Splash extends Activity {
 
         splashThread.start();
 
-        generateChiringuitosDB();
+        ChiringuitoApp app = (ChiringuitoApp) getApplication();
+        DownloadChiringuitosTask task = new DownloadChiringuitosTask();
+        task.execute(app.getRssUrl());
 
     }
 
@@ -146,11 +149,20 @@ public class Splash extends Activity {
         }
     }
 
-    private void generateChiringuitosDB() {
-        ChiringuitoApp app = (ChiringuitoApp) getApplication();
-        getContentResolver()
-                .delete(ChiringuitoProvider.CONTENT_URI, null, null);
-        RssDownloadHelper.updateRssData(app.getRssUrl(), getContentResolver());
+    private class DownloadChiringuitosTask extends
+            AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... url) {
+
+            RssDownloadHelper.updateRssData(url[0], getContentResolver());
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Toast.makeText(getApplicationContext(), "Chiringuitos updated!",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

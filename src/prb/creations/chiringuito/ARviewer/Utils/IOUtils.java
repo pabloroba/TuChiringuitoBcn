@@ -10,25 +10,9 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class IOUtils {
-//    public static Bitmap getBitmapFromURL(String src) {
-//        try {
-//            URL url = new URL(src);
-//            HttpURLConnection connection = (HttpURLConnection) url
-//                    .openConnection();
-//            connection.setDoInput(true);
-//            connection.connect();
-//            InputStream input = connection.getInputStream();
-//            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-//            return myBitmap;
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return null;
-//        }
-//    }
     public static Bitmap getBitmapFromURL(String str_url) {
         Bitmap bitmap = null;
         InputStream in = null;

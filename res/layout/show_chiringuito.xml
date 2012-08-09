@@ -57,7 +57,6 @@
                     android:padding="5dip"
                     android:layout_marginTop="5dip"
                     android:layout_marginBottom="5dip"
-                    android:text="@string/no_info"
                     style="@android:style/TextAppearance.Small"
                     android:textColor="@android:color/white" />
 
