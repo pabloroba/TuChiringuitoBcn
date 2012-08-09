@@ -161,117 +161,114 @@ public final class R {
         public static final int gestures=0x7f060000;
     }
     public static final class string {
-        public static final int about_message_arviewer=0x7f090009;
-        public static final int about_message_chiringuito=0x7f090008;
-        public static final int about_title=0x7f090006;
-        public static final int about_web=0x7f090007;
+        public static final int about_message_arviewer=0x7f090008;
+        public static final int about_message_chiringuito=0x7f090007;
+        public static final int about_title=0x7f090005;
+        public static final int about_web=0x7f090006;
         public static final int app_name=0x7f090000;
-        public static final int cancel=0x7f090049;
-        public static final int content_1=0x7f090056;
-        public static final int content_2=0x7f090057;
-        public static final int content_3=0x7f090058;
-        public static final int content_4=0x7f090059;
-        public static final int content_5=0x7f09005a;
-        public static final int distance=0x7f090053;
-        public static final int done=0x7f090045;
-        public static final int error=0x7f09004e;
-        public static final int error_environment=0x7f090050;
-        public static final int error_no_nodes=0x7f090051;
-        public static final int error_too_much_nodes=0x7f09004f;
-        public static final int finish=0x7f090046;
-        public static final int loading=0x7f090052;
-        public static final int location_provider_change=0x7f090017;
-        public static final int location_provider_enable=0x7f090016;
-        public static final int location_provider_message=0x7f090015;
-        public static final int location_provider_title=0x7f090014;
+        public static final int cancel=0x7f090048;
+        public static final int content_1=0x7f090055;
+        public static final int content_2=0x7f090056;
+        public static final int content_3=0x7f090057;
+        public static final int content_4=0x7f090058;
+        public static final int content_5=0x7f090059;
+        public static final int distance=0x7f090052;
+        public static final int done=0x7f090044;
+        public static final int error=0x7f09004d;
+        public static final int error_environment=0x7f09004f;
+        public static final int error_no_nodes=0x7f090050;
+        public static final int error_too_much_nodes=0x7f09004e;
+        public static final int finish=0x7f090045;
+        public static final int loading=0x7f090051;
+        public static final int location_provider_change=0x7f090016;
+        public static final int location_provider_enable=0x7f090015;
+        public static final int location_provider_message=0x7f090014;
+        public static final int location_provider_title=0x7f090013;
         public static final int machineServer=0x7f090002;
         public static final int map_key=0x7f090003;
-        public static final int menu_about=0x7f090040;
+        public static final int menu_about=0x7f09003f;
         /**  Menu entries 
  Menu entries 
          */
-        public static final int menu_distance=0x7f09003f;
-        public static final int menu_home=0x7f090042;
-        public static final int menu_map=0x7f090041;
-        public static final int menu_settings=0x7f090043;
-        public static final int no_info=0x7f090055;
-        public static final int no_layer=0x7f09004b;
-        public static final int no_title=0x7f090054;
+        public static final int menu_distance=0x7f09003e;
+        public static final int menu_home=0x7f090041;
+        public static final int menu_map=0x7f090040;
+        public static final int menu_settings=0x7f090042;
+        public static final int no_info=0x7f090054;
+        public static final int no_layer=0x7f09004a;
+        public static final int no_title=0x7f090053;
         /**  GUI messages 
  GUI messages 
          */
-        public static final int ok=0x7f090044;
-        public static final int pref_ar_altitude_distFilter_title=0x7f09001e;
-        public static final int pref_ar_altitude_status_summary=0x7f09001a;
-        public static final int pref_ar_altitude_status_title=0x7f090019;
+        public static final int ok=0x7f090043;
+        public static final int pref_ar_altitude_distFilter_title=0x7f09001d;
+        public static final int pref_ar_altitude_status_summary=0x7f090019;
+        public static final int pref_ar_altitude_status_title=0x7f090018;
         /**  AR preferences 
  AR preferences 
          */
-        public static final int pref_ar_altitude_title=0x7f090018;
-        public static final int pref_ar_altitude_useDistFilter_summary_off=0x7f09001d;
-        public static final int pref_ar_altitude_useDistFilter_summary_on=0x7f09001c;
-        public static final int pref_ar_altitude_useDistFilter_title=0x7f09001b;
-        public static final int pref_ar_debug_showMeasures_summary_off=0x7f090034;
-        public static final int pref_ar_debug_showMeasures_summary_on=0x7f090033;
-        public static final int pref_ar_debug_showMeasures_title=0x7f090032;
-        public static final int pref_ar_debug_title=0x7f090030;
-        public static final int pref_ar_labels_centerLabels_summary_off=0x7f09002a;
-        public static final int pref_ar_labels_centerLabels_summary_on=0x7f090029;
-        public static final int pref_ar_labels_centerLabels_title=0x7f090028;
-        public static final int pref_ar_labels_imageIcon_summary_off=0x7f09002d;
-        public static final int pref_ar_labels_imageIcon_summary_on=0x7f09002c;
-        public static final int pref_ar_labels_imageIcon_title=0x7f09002b;
-        public static final int pref_ar_labels_title=0x7f090027;
-        public static final int pref_ar_location_title=0x7f09001f;
-        public static final int pref_ar_names_namesShowing_summary=0x7f090031;
-        public static final int pref_ar_names_namesShowing_title=0x7f09002f;
-        public static final int pref_ar_names_title=0x7f09002e;
-        public static final int pref_ar_tools_rotatingCompass_summary_off=0x7f090023;
-        public static final int pref_ar_tools_rotatingCompass_summary_on=0x7f090022;
-        public static final int pref_ar_tools_rotatingCompass_title=0x7f090021;
-        public static final int pref_ar_tools_searchSystem_summary_off=0x7f090026;
-        public static final int pref_ar_tools_searchSystem_summary_on=0x7f090025;
-        public static final int pref_ar_tools_searchSystem_title=0x7f090024;
-        public static final int pref_ar_tools_title=0x7f090020;
-        public static final int pref_floor_title=0x7f09003e;
-        public static final int pref_location_distance_summary=0x7f090013;
-        public static final int pref_location_distance_title=0x7f090012;
-        public static final int pref_location_period_summary=0x7f090011;
-        public static final int pref_location_period_title=0x7f090010;
-        public static final int pref_location_provider_summary=0x7f09000d;
-        public static final int pref_location_provider_title=0x7f09000c;
-        public static final int pref_location_summary=0x7f09000b;
+        public static final int pref_ar_altitude_title=0x7f090017;
+        public static final int pref_ar_altitude_useDistFilter_summary_off=0x7f09001c;
+        public static final int pref_ar_altitude_useDistFilter_summary_on=0x7f09001b;
+        public static final int pref_ar_altitude_useDistFilter_title=0x7f09001a;
+        public static final int pref_ar_debug_showMeasures_summary_off=0x7f090033;
+        public static final int pref_ar_debug_showMeasures_summary_on=0x7f090032;
+        public static final int pref_ar_debug_showMeasures_title=0x7f090031;
+        public static final int pref_ar_debug_title=0x7f09002f;
+        public static final int pref_ar_labels_centerLabels_summary_off=0x7f090029;
+        public static final int pref_ar_labels_centerLabels_summary_on=0x7f090028;
+        public static final int pref_ar_labels_centerLabels_title=0x7f090027;
+        public static final int pref_ar_labels_imageIcon_summary_off=0x7f09002c;
+        public static final int pref_ar_labels_imageIcon_summary_on=0x7f09002b;
+        public static final int pref_ar_labels_imageIcon_title=0x7f09002a;
+        public static final int pref_ar_labels_title=0x7f090026;
+        public static final int pref_ar_location_title=0x7f09001e;
+        public static final int pref_ar_names_namesShowing_summary=0x7f090030;
+        public static final int pref_ar_names_namesShowing_title=0x7f09002e;
+        public static final int pref_ar_names_title=0x7f09002d;
+        public static final int pref_ar_tools_rotatingCompass_summary_off=0x7f090022;
+        public static final int pref_ar_tools_rotatingCompass_summary_on=0x7f090021;
+        public static final int pref_ar_tools_rotatingCompass_title=0x7f090020;
+        public static final int pref_ar_tools_searchSystem_summary_off=0x7f090025;
+        public static final int pref_ar_tools_searchSystem_summary_on=0x7f090024;
+        public static final int pref_ar_tools_searchSystem_title=0x7f090023;
+        public static final int pref_ar_tools_title=0x7f09001f;
+        public static final int pref_floor_title=0x7f09003d;
+        public static final int pref_location_distance_summary=0x7f090012;
+        public static final int pref_location_distance_title=0x7f090011;
+        public static final int pref_location_period_summary=0x7f090010;
+        public static final int pref_location_period_title=0x7f09000f;
+        public static final int pref_location_provider_summary=0x7f09000c;
+        public static final int pref_location_provider_title=0x7f09000b;
+        public static final int pref_location_summary=0x7f09000a;
         /**  Location preferences 
  Location preferences 
          */
-        public static final int pref_location_title=0x7f09000a;
-        public static final int pref_location_tunits_summary=0x7f09000f;
-        public static final int pref_location_tunits_title=0x7f09000e;
-        public static final int pref_useFloor_summary_off=0x7f09003d;
-        public static final int pref_useFloor_summary_on=0x7f09003c;
-        public static final int pref_useFloor_title=0x7f09003b;
-        public static final int pref_useGPS_summary_off=0x7f090039;
-        public static final int pref_useGPS_summary_on=0x7f090038;
-        public static final int pref_useGPS_title=0x7f090037;
-        public static final int pref_userHeight_title=0x7f09003a;
+        public static final int pref_location_title=0x7f090009;
+        public static final int pref_location_tunits_summary=0x7f09000e;
+        public static final int pref_location_tunits_title=0x7f09000d;
+        public static final int pref_useFloor_summary_off=0x7f09003c;
+        public static final int pref_useFloor_summary_on=0x7f09003b;
+        public static final int pref_useFloor_title=0x7f09003a;
+        public static final int pref_useGPS_summary_off=0x7f090038;
+        public static final int pref_useGPS_summary_on=0x7f090037;
+        public static final int pref_useGPS_title=0x7f090036;
+        public static final int pref_userHeight_title=0x7f090039;
         /**  User's altitude preferences 
  User's altitude preferences 
          */
-        public static final int pref_user_altitude_summary=0x7f090035;
-        public static final int pref_user_altitude_title=0x7f090036;
-        public static final int remove=0x7f09004c;
-        public static final int return_=0x7f090047;
-        public static final int revision_arviewer=0x7f090005;
-        public static final int search=0x7f09004a;
-        public static final int skip=0x7f090048;
-        public static final int sure=0x7f09004d;
+        public static final int pref_user_altitude_summary=0x7f090034;
+        public static final int pref_user_altitude_title=0x7f090035;
+        public static final int remove=0x7f09004b;
+        public static final int return_=0x7f090046;
+        public static final int search=0x7f090049;
+        public static final int skip=0x7f090047;
+        public static final int sure=0x7f09004c;
         public static final int urlServer=0x7f090001;
         /**  About dialog 
+ About dialog 
          */
-        public static final int version_arviewer=0x7f090004;
-        /**  About dialog 
-         */
-        public static final int version_chiringuito=0x7f09005b;
+        public static final int version_app=0x7f090004;
     }
     public static final class style {
         public static final int TransparentTheme=0x7f0a0000;

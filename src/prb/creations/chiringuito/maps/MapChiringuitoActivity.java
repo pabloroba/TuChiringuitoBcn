@@ -285,7 +285,7 @@ public class MapChiringuitoActivity extends MapActivity {
                         .findViewById(R.id.dialog_text_chiringuito);
                 CharSequence str = textChir.getText();
                 textChir.setText(getString(R.string.app_name) + " "
-                        + getString(R.string.version_arviewer) + "\n"
+                        + getString(R.string.version_app) + "\n"
                         + str.toString());
                 return new AlertDialog.Builder(this)
                         .setIcon(R.drawable.ic_menu_about)

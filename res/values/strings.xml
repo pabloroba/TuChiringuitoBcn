@@ -7,8 +7,7 @@
     <string name="map_key">0-ljZDHZZ4T9P_ekNE4Uelb61tP814EpHhicCKA</string>
 
     <!-- About dialog -->
-    <string name="version_arviewer">1.1beta</string>
-    <string name="revision_arviewer"></string>
+    <string name="version_app">1.2beta</string>
     <string name="about_title">Acerca de</string>
     <string name="about_web">Visita la web!</string>
     <string name="about_message_chiringuito">© TuChiringuitoBcn.com \n\n
