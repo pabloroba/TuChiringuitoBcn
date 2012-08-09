@@ -40,7 +40,7 @@
  *
  */
 
-package prb.creations.chiringuito.Maps;
+package prb.creations.chiringuito.maps;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;

@@ -67,6 +67,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -74,7 +75,7 @@ import android.widget.TextView;
 public class ShowChiringuitoActivity extends Activity {
     private TextView tvName;
     private ImageView ivPhoto;
-    private TextView tvInfo;
+    private WebView wvInfo;
     private Button bLink;
 
     private long chiringuitoID;
@@ -88,7 +89,7 @@ public class ShowChiringuitoActivity extends Activity {
         setTitle(R.string.app_name);
         tvName = (TextView) findViewById(R.id.chiringuitoName);
         ivPhoto = (ImageView) findViewById(R.id.chiringuitoPhoto);
-        tvInfo = (TextView) findViewById(R.id.chiringuitoInfo);
+        wvInfo = (WebView) findViewById(R.id.chiringuitoInfo);
         bLink = (Button) findViewById(R.id.buttonLink);
 
         bmPhoto = null;
@@ -134,7 +135,7 @@ public class ShowChiringuitoActivity extends Activity {
                 
                 tvName.setText(sName);
                 if (sInfo != null && sInfo.length() > 0)
-                    tvInfo.setText(sInfo);
+                    wvInfo.loadDataWithBaseURL(null, sInfo, "text/html", "UTF-8", null);
                 if (sPhoto != null && sPhoto.length() > 0) {
                     try {
                         bmPhoto = IOUtils.getBitmapFromURL(sPhoto);

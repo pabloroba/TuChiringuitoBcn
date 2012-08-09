@@ -54,7 +54,7 @@ import prb.creations.chiringuito.ARviewer.Overlays.DrawRadar;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawResource;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawUserStatus;
 import prb.creations.chiringuito.ARviewer.Utils.AltitudeManager;
-import prb.creations.chiringuito.Maps.MapChiringuitoActivity;
+import prb.creations.chiringuito.maps.MapChiringuitoActivity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

@@ -47,7 +47,7 @@
                     android:padding="3dip"
                     android:src="@drawable/indicator" />
 
-                <TextView
+                <WebView
                     android:id="@+id/chiringuitoInfo"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"

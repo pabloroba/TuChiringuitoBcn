@@ -40,7 +40,7 @@
  *
  */
 
-package prb.creations.chiringuito.Maps;
+package prb.creations.chiringuito.maps;
 
 import java.util.ArrayList;
 

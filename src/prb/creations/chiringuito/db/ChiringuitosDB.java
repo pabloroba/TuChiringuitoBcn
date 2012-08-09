@@ -77,5 +77,6 @@ public class ChiringuitosDB {
 		public static final String LONGITUDE = "longitude";
 		public static final String PHOTO = "picture";
 		public static final String SOURCE = "source";
+		public static final String _COUNT = "8";
 	}
 }
