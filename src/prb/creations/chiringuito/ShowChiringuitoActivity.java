@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -46,6 +46,7 @@ import com.libresoft.sdk.ARviewer.Utils.BitmapUtils;
 
 import prb.creations.chiringuito.ARviewer.ARviewer;
 import prb.creations.chiringuito.ARviewer.Location.ARLocationManager;
+import prb.creations.chiringuito.ARviewer.Utils.IOUtils;
 import prb.creations.chiringuito.db.ChiringuitoProvider;
 import prb.creations.chiringuito.db.ChiringuitosDB.Chiringuitos;
 
@@ -60,11 +61,15 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -72,7 +77,7 @@ import android.widget.TextView;
 public class ShowChiringuitoActivity extends Activity {
     private TextView tvName;
     private ImageView ivPhoto;
-    private TextView tvInfo;
+    private WebView wvInfo;
     private Button bLink;
 
     private long chiringuitoID;
@@ -82,11 +87,16 @@ public class ShowChiringuitoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Hide the window title and notifications bar.
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        
         setContentView(R.layout.show_chiringuito);
         setTitle(R.string.app_name);
         tvName = (TextView) findViewById(R.id.chiringuitoName);
         ivPhoto = (ImageView) findViewById(R.id.chiringuitoPhoto);
-        tvInfo = (TextView) findViewById(R.id.chiringuitoInfo);
+        wvInfo = (WebView) findViewById(R.id.chiringuitoInfo);
         bLink = (Button) findViewById(R.id.buttonLink);
 
         bmPhoto = null;
@@ -118,7 +128,7 @@ public class ShowChiringuitoActivity extends Activity {
             } else {
                 return;
             }
-                
+
             cursor.setNotificationUri(getContentResolver(), uri);
             startManagingCursor(cursor);
 
@@ -127,13 +137,15 @@ public class ShowChiringuitoActivity extends Activity {
                 String sInfo = cursor.getString(2);
                 String sPhoto = cursor.getString(3);
                 final String sLink = cursor.getString(4);
-
+                
+                Log.e("SHOWCHIRINGO: ", sName + "\n" + sInfo + "\n" + sPhoto + "\n" + sLink);
+                
                 tvName.setText(sName);
                 if (sInfo != null && sInfo.length() > 0)
-                    tvInfo.setText(sInfo);
+                    wvInfo.loadDataWithBaseURL(null, sInfo, "text/html", "UTF-8", null);
                 if (sPhoto != null && sPhoto.length() > 0) {
                     try {
-                        bmPhoto = BitmapUtils.loadBitmap(sPhoto);
+                        bmPhoto = IOUtils.getBitmapFromURL(sPhoto);
                         ivPhoto.setImageBitmap(bmPhoto);
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -161,7 +173,7 @@ public class ShowChiringuitoActivity extends Activity {
                         }
                     });
                 }
-            } 
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -180,13 +192,12 @@ public class ShowChiringuitoActivity extends Activity {
                 LayoutInflater factory2 = LayoutInflater.from(this);
                 View textEntryView2 = factory2.inflate(R.layout.custom_dialog,
                         null);
-
-                TextView text2 = (TextView) textEntryView2
-                        .findViewById(R.id.dialog_text);
-                text2.setText(getString(R.string.app_name) + " "
-                        + getString(R.string.version_arviewer) +
-                        getString(R.string.revision_arviewer) + "\n"
-                        + getString(R.string.about_message));
+                TextView textChir = (TextView) textEntryView2
+                        .findViewById(R.id.dialog_text_chiringuito);
+                CharSequence str = textChir.getText();
+                textChir.setText(getString(R.string.app_name) + " "
+                        + getString(R.string.version_arviewer) + "\n"
+                        + str.toString());
                 return new AlertDialog.Builder(this)
                         .setIcon(R.drawable.ic_menu_about)
                         .setTitle(R.string.about_title)

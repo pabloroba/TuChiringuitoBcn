@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -142,8 +142,8 @@ public class TuChiringuitoBcn {
             while (cursor.moveToNext()) {
                 long id = cursor.getLong(0);
                 String name = cursor.getString(1);
-                double lat = (double) (cursor.getFloat(2));
-                double lon = (double) (cursor.getFloat(3));
+                double lat = cursor.getDouble(2);
+                double lon = cursor.getDouble(3);
                 String sUrl = cursor.getString(4);
                 String link = cursor.getString(5);
                 Chiringuito node = new Chiringuito(i, lat, lon, 0.0, 1.0, name,

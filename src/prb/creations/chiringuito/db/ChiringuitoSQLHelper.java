@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -63,12 +63,13 @@ public class ChiringuitoSQLHelper extends SQLiteOpenHelper {
         }
         db.execSQL("CREATE TABLE " + Chiringuitos.TABLE_NAME + " ("
                 + Chiringuitos._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + Chiringuitos.NAME + " TEXT,"
+                + Chiringuitos.NAME + " TEXT UNIQUE,"
                 + Chiringuitos.INFO + " TEXT,"
-                + Chiringuitos.LATITUDE + " FLOAT,"
-                + Chiringuitos.LONGITUDE + " FLOAT,"
+                + Chiringuitos.LATITUDE + " DOUBLE,"
+                + Chiringuitos.LONGITUDE + " DOUBLE,"
                 + Chiringuitos.PHOTO + " TEXT,"
-                + Chiringuitos.WEB_LINK + " TEXT " + ")");
+                + Chiringuitos.WEB_LINK + " TEXT, "
+                + Chiringuitos.SOURCE + " TEXT" + ")");
     }
 
     @Override

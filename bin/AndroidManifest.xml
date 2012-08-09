@@ -20,7 +20,8 @@
 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:name=".ChiringuitoApp" >
         <uses-library android:name="com.google.android.maps" />
 
         <activity
@@ -50,10 +51,12 @@
         </activity>
         <activity android:name=".ARviewer.Utils.AltitudePreferences" >
         </activity>
-        <activity android:name=".ShowChiringuitoActivity">
+        <activity android:name=".ShowChiringuitoActivity" 
+                android:theme="@android:style/Theme.NoTitleBar">
             
         </activity>
-        <activity android:name=".Maps.MapChiringuitoActivity" />
+        <activity android:name=".maps.MapChiringuitoActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
         <provider
             android:name=".db.ChiringuitoProvider"
             android:authorities="prb.creations.chiringuito"

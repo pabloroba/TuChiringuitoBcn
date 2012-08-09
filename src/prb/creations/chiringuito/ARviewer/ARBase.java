@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -54,7 +54,7 @@ import prb.creations.chiringuito.ARviewer.Overlays.DrawRadar;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawResource;
 import prb.creations.chiringuito.ARviewer.Overlays.DrawUserStatus;
 import prb.creations.chiringuito.ARviewer.Utils.AltitudeManager;
-import prb.creations.chiringuito.Maps.MapChiringuitoActivity;
+import prb.creations.chiringuito.maps.MapChiringuitoActivity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -336,6 +336,7 @@ public class ARBase extends ARActivity {
         loc.setLongitude(getLocation()[1]);
         loc.setAltitude(cam_altitude);
         ARLocationManager.getInstance(this).setLocation(loc);
+        this.mWakeLock.release();
 
     }
 
@@ -351,6 +352,7 @@ public class ARBase extends ARActivity {
 
         if (!(idGPS < 0))
             ARLocationManager.getInstance(this).startUpdates(this);
+        this.mWakeLock.acquire();
 
     }
 
@@ -358,7 +360,6 @@ public class ARBase extends ARActivity {
         ARGeoNode.clearBox();
         ARLocationManager.getInstance(this).stopUpdates();
         ARLocationManager.getInstance(this).resetLocation();
-        this.mWakeLock.release();
         super.onDestroy();
     }
 
@@ -422,12 +423,12 @@ public class ARBase extends ARActivity {
                 View textEntryView2 = factory2.inflate(R.layout.custom_dialog,
                         null);
 
-                TextView text2 = (TextView) textEntryView2
-                        .findViewById(R.id.dialog_text);
-                text2.setText(getString(R.string.app_name) + " "
-                        + getString(R.string.version_arviewer) +
-                        getString(R.string.revision_arviewer) + "\n"
-                        + getString(R.string.about_message));
+                TextView textChir = (TextView) textEntryView2
+                        .findViewById(R.id.dialog_text_chiringuito);
+                CharSequence str = textChir.getText();
+                textChir.setText(getString(R.string.app_name) + " "
+                        + getString(R.string.version_arviewer) + "\n"
+                        + str.toString());
                 return new AlertDialog.Builder(this)
                         .setIcon(R.drawable.ic_menu_about)
                         .setTitle(R.string.about_title)

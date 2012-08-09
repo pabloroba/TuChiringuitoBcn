@@ -17,7 +17,7 @@
  *
  *  Author : Pablo R—denas Barquero <prodenas@tuchiringuitobcn.com>
  *  
- *  Based on ARViewer of LibreGeoSocial.org:
+ *  Powered by ARviewer:
  *
  *  Copyright (C) 2011 GSyC/LibreSoft, Universidad Rey Juan Carlos.
  *
@@ -76,5 +76,7 @@ public class ChiringuitosDB {
 		public static final String LATITUDE = "latitude";
 		public static final String LONGITUDE = "longitude";
 		public static final String PHOTO = "picture";
+		public static final String SOURCE = "source";
+		public static final String _COUNT = "8";
 	}
 }
