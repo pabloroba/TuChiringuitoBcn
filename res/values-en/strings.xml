@@ -88,7 +88,7 @@
     <string name="menu_distance">Distance filter</string>
     <string name="menu_about">About</string>
     <string name="menu_map">Map</string>
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Augmented Reality</string>
     <string name="menu_settings">Settings</string>
 
     <!-- GUI messages -->
@@ -115,5 +115,7 @@
     <string name="content_3">Logo small</string>
     <string name="content_4">Logo splash</string>
     <string name="content_5">Logo ARviewer</string>
-
+    
+    <!-- Toast messages -->
+    <string name="toast_augmented_reality">Loading Augmented Reality&#8230;</string>
 </resources>

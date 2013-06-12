@@ -18,7 +18,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_below="@id/map"
-        android:contentDescription="-"
+        android:contentDescription="@string/none"
         android:background="@android:color/transparent"
         android:src="@drawable/bu_map_search" />
 
@@ -31,7 +31,19 @@
         android:layout_toLeftOf="@id/searchButton"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="3dp"
-        android:hint="..."
+        android:hint="@string/points"
         android:textColor="@android:color/black" />
+
+   <ImageButton
+       android:id="@+id/arButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentRight="true"
+       android:layout_marginBottom="15dp"
+       android:layout_marginRight="15dp"
+       android:background="@android:color/transparent"
+       android:contentDescription="@string/none"
+       android:src="@drawable/ic_menu_home" />
 
 </RelativeLayout>

@@ -61,7 +61,6 @@ import android.view.ViewGroup.LayoutParams;
 import java.util.ArrayList;
 
 public class ARviewer extends ARBase {
-
     private static final int MENU_DISTANCE_FILTER = 101;
     private static final int DIALOG_EMPTY = 101;
 

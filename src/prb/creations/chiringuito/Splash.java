@@ -43,6 +43,7 @@
 package prb.creations.chiringuito;
 
 import prb.creations.chiringuito.ARviewer.ARviewer;
+import prb.creations.chiringuito.maps.MapChiringuitoActivity;
 import prb.creations.chiringuito.rss.RssDownloadHelper;
 
 import android.app.Activity;
@@ -101,8 +102,9 @@ public class Splash extends Activity {
     };
 
     protected void onCreate(Bundle savedInstanceState) {
-        startIntent = new Intent(getBaseContext(), ARviewer.class);
-
+        startIntent = new Intent(getBaseContext(), 
+                MapChiringuitoActivity.class);
+        
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.splash);
