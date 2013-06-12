@@ -175,6 +175,7 @@ public final class R {
         public static final int content_5=0x7f09005b;
         public static final int distance=0x7f090054;
         public static final int done=0x7f090046;
+        public static final int dots=0x7f090005;
         public static final int error=0x7f09004f;
         public static final int error_environment=0x7f090051;
         public static final int error_no_nodes=0x7f090052;
@@ -203,7 +204,6 @@ public final class R {
  GUI messages 
          */
         public static final int ok=0x7f090045;
-        public static final int points=0x7f090005;
         public static final int pref_ar_altitude_distFilter_title=0x7f09001f;
         public static final int pref_ar_altitude_status_summary=0x7f09001b;
         public static final int pref_ar_altitude_status_title=0x7f09001a;

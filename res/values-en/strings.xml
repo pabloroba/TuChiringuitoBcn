@@ -5,6 +5,8 @@
     <string name="urlServer">www.tuchiringuitobcn.com/app/</string>
     <string name="machineServer">http://www.tuchiringuitobcn.com/</string>
     <string name="map_key">0-ljZDHZZ4T9P_ekNE4Uelb61tP814EpHhicCKA</string>
+    <string name="none">-</string>
+    <string name="dots">&#8230;</string>
 
     <!-- About dialog -->
     <string name="version_app">1.2beta</string>

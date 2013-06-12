@@ -31,7 +31,7 @@
         android:layout_toLeftOf="@id/searchButton"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="3dp"
-        android:hint="@string/points"
+        android:hint="@string/dots"
         android:textColor="@android:color/black" />
 
    <ImageButton
