@@ -42,7 +42,6 @@
 
 package prb.creations.chiringuito;
 
-import prb.creations.chiringuito.ARviewer.ARviewer;
 import prb.creations.chiringuito.maps.MapChiringuitoActivity;
 import prb.creations.chiringuito.rss.RssDownloadHelper;
 
