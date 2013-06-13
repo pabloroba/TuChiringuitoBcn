@@ -5,6 +5,8 @@
     <string name="urlServer">www.tuchiringuitobcn.com/app/</string>
     <string name="machineServer">http://www.tuchiringuitobcn.com/</string>
     <string name="map_key">0-ljZDHZZ4T9P_ekNE4Uelb61tP814EpHhicCKA</string>
+    <string name="none">-</string>
+    <string name="dots">&#8230;</string>
 
     <!-- About dialog -->
     <string name="version_app">1.2beta</string>
@@ -88,7 +90,7 @@
     <string name="menu_distance">Distance filter</string>
     <string name="menu_about">About</string>
     <string name="menu_map">Map</string>
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Augmented Reality</string>
     <string name="menu_settings">Settings</string>
 
     <!-- GUI messages -->
@@ -115,5 +117,7 @@
     <string name="content_3">Logo small</string>
     <string name="content_4">Logo splash</string>
     <string name="content_5">Logo ARviewer</string>
-
+    
+    <!-- Toast messages -->
+    <string name="toast_augmented_reality">Loading Augmented Reality&#8230;</string>
 </resources>

@@ -78,6 +78,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -87,6 +88,7 @@ public class MapChiringuitoActivity extends MapActivity {
     private Context mContext;
     private MapView mMap;
     private ImageButton ibSearch;
+    private ImageButton ibAR;
     private AutoCompleteTextView actvAddress;
     private MapController mController;
     private MyLocationOverlay mLocation;
@@ -135,6 +137,19 @@ public class MapChiringuitoActivity extends MapActivity {
             }
         });
         actvAddress.setVisibility(View.GONE);
+        ibAR = (ImageButton) findViewById(R.id.arButton);
+        ibAR.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        R.string.toast_augmented_reality,
+                        Toast.LENGTH_SHORT).show();
+                Intent i = new Intent();
+                i.setClass(MapChiringuitoActivity.this,
+                        ARviewer.class);
+                startActivity(i);
+            }
+        });
         ibSearch = (ImageButton) findViewById(R.id.searchButton);
         ibSearch.setOnClickListener(new View.OnClickListener() {
 
